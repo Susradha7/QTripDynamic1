@@ -32,17 +32,19 @@ let citydatamodule = document.querySelector("#data");
  imageElement.setAttribute("class","img-responsive");
 //  let hElement = document.createElement("h2");
 //  hElement.innerText = `${city}`;
- let divElement = document.createElement("div");
-divElement.setAttribute("class","tile");
-divElement.innerHTML=`
+let aElement = document.createElement("a");
+aElement.href = `pages/adventures/?city=${id}` ;
+ let cardElement = document.createElement("cards");
+ cardElement.setAttribute("class","tile");
+ cardElement.innerHTML=`
 <div class="tile-text text-center">
   <h2>${city}</h2>
   <p>${description}</p>
 </div>
 `;
-divElement.appendChild(imageElement);
-// divElement.append(hElement);
-citydatamodule.appendChild(divElement);
+cardElement.appendChild(imageElement);
+aElement.append(cardElement);
+citydatamodule.appendChild(cardElement);
 
 
 }
