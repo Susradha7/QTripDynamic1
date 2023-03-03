@@ -44,7 +44,7 @@ aElement.href = `pages/adventures/?city=${id}` ;
 `;
 cardElement.appendChild(imageElement);
 aElement.append(cardElement);
-citydatamodule.appendChild(cardElement);
+citydatamodule.appendChild(aElement);
 
 
 }
