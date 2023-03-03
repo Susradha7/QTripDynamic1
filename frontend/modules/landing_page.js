@@ -14,10 +14,15 @@ async function init() {
 async function fetchCities() {
   // TODO: MODULE_CITIES
   // 1. Fetch cities using the Backend API and return the data
-const response  = await fetch("http://3.7.188.0:8082/cities");
+  try{
+    const response  = await fetch("http://3.7.188.0:8082/cities");
 const data = await response.json();
 // console.log(data);
 return data;
+  }catch{
+    console.log("Error Occured");
+  }
+
 }
 
 //Implementation of DOM manipulation to add cities
