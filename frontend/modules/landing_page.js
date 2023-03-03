@@ -19,7 +19,7 @@ async function fetchCities() {
 const data = await response.json();
 // console.log(data);
 return data;
-  }catch{
+  }catch(err){
     console.log("Error Occured");
   }
 
