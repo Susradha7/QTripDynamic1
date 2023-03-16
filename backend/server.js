@@ -51,7 +51,7 @@ The response is an [array] of adventures with each having the following structur
  }
 Data is sourced from "adventures" array in db.json file
 */
-app.get("/adventures", (req, res) => {
+app.get("http://65.0.16.33:8082/adventures", (req, res) => {
   const data = db.get("adventures").value();
   let response = (data.find((item) => item.id == req.query.city) || [])
     .adventures;

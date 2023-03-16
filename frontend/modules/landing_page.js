@@ -30,7 +30,7 @@ return data;
 function addCityToDOM(id, city, description, image) {
   // TODO: MODULE_CITIES
   // 1. Populate the City details and insert those details into the DOM
-  console.log();
+  
 let citydatamodule = document.querySelector("#data");
 citydatamodule.id = `${id}`;
  let imageElement = document.createElement("img");
@@ -39,7 +39,7 @@ citydatamodule.id = `${id}`;
 //  let hElement = document.createElement("h2");
 //  hElement.innerText = `${city}`;
 let aElement = document.createElement("a");
-aElement.href = `pages/adventures/?city=${id}` ;
+aElement.href = `pages/adventures/?city=${city}` ;
  let cardElement = document.createElement("div");
  cardElement.setAttribute("class","tile");
  cardElement.className = "col-6 col-lg-3 mb-4";
