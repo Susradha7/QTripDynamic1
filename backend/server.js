@@ -32,7 +32,7 @@ The response is an [array] of cities with each having the following structure :
 }
 Data is sourced from "cities" array in db.json file
 */
-app.get("http://43.205.157.72:8082/cities", (req, res) => {
+app.get("http://3.6.27.112:8082/cities", (req, res) => {
   const data = db.get("cities").value();
   return res.json(data);
 });

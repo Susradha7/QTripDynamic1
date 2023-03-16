@@ -15,12 +15,12 @@ async function fetchCities() {
   // TODO: MODULE_CITIES
   // 1. Fetch cities using the Backend API and return the data
   try{
-    let response  = await fetch("http://43.205.157.72:8082/cities");
+    // let response  = await fetch("http://3.6.27.112:8082/cities");
+    let response  = await fetch(config.backendEndpoint + "/cities");
 let data = await response.json();
 // console.log(data);
 return data;
   }catch(err){
-    console.log("Error Occured");
     return null;
   }
 
@@ -40,8 +40,9 @@ citydatamodule.id = `${id}`;
 //  hElement.innerText = `${city}`;
 let aElement = document.createElement("a");
 aElement.href = `pages/adventures/?city=${id}` ;
- let cardElement = document.createElement("cards");
+ let cardElement = document.createElement("div");
  cardElement.setAttribute("class","tile");
+ cardElement.className = "col-6 col-lg-3 mb-4";
  cardElement.innerHTML=`
 <div class="tile-text text-center">
   <h2>${city}</h2>
