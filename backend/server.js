@@ -32,7 +32,7 @@ The response is an [array] of cities with each having the following structure :
 }
 Data is sourced from "cities" array in db.json file
 */
-app.get("http://3.6.27.112:8082/cities", (req, res) => {
+app.get("http://65.0.16.33:8082/cities", (req, res) => {
   const data = db.get("cities").value();
   return res.json(data);
 });
@@ -51,7 +51,7 @@ The response is an [array] of adventures with each having the following structur
  }
 Data is sourced from "adventures" array in db.json file
 */
-app.get("/adventures", (req, res) => {
+app.get("http://65.0.16.33:8082/adventures", (req, res) => {
   const data = db.get("adventures").value();
   let response = (data.find((item) => item.id == req.query.city) || [])
     .adventures;
