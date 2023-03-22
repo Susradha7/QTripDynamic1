@@ -39,7 +39,7 @@ citydatamodule.id = `${id}`;
 //  let hElement = document.createElement("h2");
 //  hElement.innerText = `${city}`;
 let aElement = document.createElement("a");
-aElement.href = `pages/adventures/?city=${id}` ;
+aElement.href = `/pages/adventures/?city=${id}` ;
 aElement.id = `${id}`;
  let cardElement = document.createElement("div");
  cardElement.setAttribute("class","tile");
