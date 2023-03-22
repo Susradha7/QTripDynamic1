@@ -17,7 +17,7 @@ async function fetchAdventures(city) {
   // 1. Fetch adventures using the Backend API and return the data
   try{
     // let response  = await fetch("http://3.6.27.112:8082/cities");
-    let response  = await fetch(config.backendEndpoint + `/pages/adventures?city=${city}`);
+    let response  = await fetch(config.backendEndpoint + `/adventures?city=${city}`);
 let data = await response.json();
 // console.log(data);
 return data;
@@ -30,7 +30,9 @@ return data;
 function addAdventureToDOM(adventures) {
   // TODO: MODULE_ADVENTURES
   // 1. Populate the Adventure Cards and insert those details into the DOM
+  console.log(adventures)
 adventures.forEach( (adventure) => {
+  console.log(adventure)
   const advEle = document.createElement("div");
   advEle.className = "col-6 col-lg-3 mb-4 position-relative";
   advEle.innerHTML = `

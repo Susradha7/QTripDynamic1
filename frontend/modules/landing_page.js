@@ -32,14 +32,14 @@ function addCityToDOM(id, city, description, image) {
   // 1. Populate the City details and insert those details into the DOM
   
 let citydatamodule = document.querySelector("#data");
-citydatamodule.id = `${id}`;
+// citydatamodule.id = `${id}`;
  let imageElement = document.createElement("img");
  imageElement.src = `${image}`;
  imageElement.setAttribute("class","img-responsive");
 //  let hElement = document.createElement("h2");
 //  hElement.innerText = `${city}`;
 let aElement = document.createElement("a");
-aElement.href = `/pages/adventures/?city=${id}` ;
+aElement.href = `pages/adventures/?city=${id}` ;
 aElement.id = `${id}`;
  let cardElement = document.createElement("div");
  cardElement.setAttribute("class","tile");
