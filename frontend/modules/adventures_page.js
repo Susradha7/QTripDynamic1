@@ -30,9 +30,7 @@ return data;
 function addAdventureToDOM(adventures) {
   // TODO: MODULE_ADVENTURES
   // 1. Populate the Adventure Cards and insert those details into the DOM
-  console.log(adventures)
 adventures.forEach( (adventure) => {
-  console.log(adventure)
   const advEle = document.createElement("div");
   advEle.className = "col-6 col-lg-3 mb-4 position-relative";
   advEle.innerHTML = `
@@ -40,7 +38,7 @@ adventures.forEach( (adventure) => {
     <div class="category-banner">${adventure.category}
     </div>
     <div class="activity-card">
-    <img class="image-responsive" src=${adventure.image} />
+    <img class="image-responsive" src=${adventure.image} alt=""/>
     <div class="activity-card-text text-md-center w-100 mt-3">
       <div class="d-block c-md-flex justify-content-between flex-wrap ps-3 pe-3">
       <h5 class="text-left">${adventure.name}</h5>
